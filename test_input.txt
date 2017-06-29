@@ -1,0 +1,74 @@
+12/1/2016 18:05:33	ant, les 	les.ant@gmail.com	Level II = College Interns	Monthly Shift Requests					"Wednesday, January 4th 8am-12pm
+Wednesday, January 11th 8-12pm
+Wednesday, January 18th 8a-12pm
+Wednesday, January 25th 8am-12pm
+Tuesday, January 31st 8am-12pm"	"Tuesday, January 3rd 8am-12pm
+Tuesday, January 10th 8am-12pm
+Tuesday, January 17th 8am-12pm
+Tuesday, January 24th 8am-12pm"															
+12/1/2016 18:13:57	John Smith	john.smith@gmail.com	Level II = College Interns	Monthly Shift Requests					"Sunday, January 8 12pm-4p
+Saturday, January 14th 8am-12
+Saturday, January 21st 8a-12p
+Saturday, January 28th 12-4p"	"Sunday, January 8 4pm-8pm
+Sunday, January 15th 4pm-8pm
+Sunday, January 22nd 8am-12pm
+Sunday, Janaury 29th 4pm-8pm"															
+12/1/2016 18:14:52	nguyen, lisa	linguyen@gmail.com	Level II = College Interns	Monthly Shift Requests					"Thursday, January 19th 8pm-12am
+Thursday, January 26th, 8pm-12am"	"Tuesday, January 17th 8pm-12am
+Tuesday, January 24th 8pm-12am"	I will not be back from my LOA until 1/15.														
+12/1/2016 18:30:24	SAMS, Sara	ssams@gmail.com	Level II = College Interns	Monthly Shift Requests					Friday, December 2nd, 8pm-12am	Saturday, December 3rd, 8pm-12am															
+12/1/2016 20:17:16	Tang, Eugene	eutang@gmail.com	Level II = College Interns	Monthly Shift Requests					"Thursday, December 8th 4pm-8pm
+Thursday, December 15th 4pm-8pm"	"Wednesday, December 7th 4pm-8pm
+Sunday, December 11th 8pm-12am"															
+12/1/2016 20:33:11	De Marcus, Aaron	ddaarr120n@gmail.com	Level II = College Interns	Monthly Shift Requests					"Thursday January 5th, 8 am - 12 pm
+Thursday January 12th, 8 am - 12 pm
+Thursday January 19th, 8 am - 12 pm
+Thursday January 26th, 8 am - 12 pm"	"Thursday January 5th, 12 pm - 4 pm
+Thursday January 12th, 12 pm - 4 pm
+Thursday January 19th, 12 pm - 4 pm
+Thursday January 26th, 12 pm - 4 pm"															
+12/2/2016 11:39:51	Aaron De Marcus 	ddaarr120n@gmail.com	Level II = College Interns	Reschedule		Thursday December 22nd, 8 am - 12 pm	Wednesday December 21st 8 am - 12 pm	Wednesday December 21st 12 pm - 4 pm																	
+12/3/2016 0:24:11	Manu, Alex	aardvark@gmail.com	Level II = College Interns	Monthly Shift Requests					"Thursday, December 8 4pm-8pm
+Saturday, December 17 4pm-8pm
+Wednesday, December 21 12pm-4pm
+Thursday, December 29 12pm-4pm
+"	"Sunday, December 4, 12pm-4pm
+Friday, December 16 8pm-12am
+Monday, December 19 4pm-8pm
+Tuesday, December 27, 8pm-12am"															
+12/4/2016 9:41:32	West, Anderson	westtotheeast@gmail.com	Level II = College Interns	Monthly Shift Requests					"Monday, December 5th, 12pm-4pm
+Monday, December 19th, 12pm-4pm
+Thursday, December 29th, 12pm-4pm"	"Monday, December 5th, 4pm-8pm
+Monday, December 19th, 4pm-8pm"															
+12/4/2016 17:11:02	Heiney, Gary	gastliver@gmail.com	Level II = College Interns	Monthly Shift Requests					"Monday, 2 January 8PM-12AM
+Monday, 9 January 8PM-12AM
+Monday,16  January 8PM-12AM
+Monday, 23 January 8PM-12AM
+Monday, 30 January 8PM-12AM
+"	"Wednesday, 4 January 8PM-12AM
+Wednesday, 11 January 8PM-12AM
+Wednesday, 18 January 8PM-12AM
+Wednesday, 25 January 8PM-12AM"															
+12/4/2016 18:40:14	Claws, Santa	hohoho@gmail.com	Level II = College Interns	Monthly Shift Requests					"Monday, January 2nd 8pm-12am
+Monday, January 9th 8pm-12am
+Tuesday, January 17th 8pm-12am
+Monday, January 23rd 8pm-12am"	"Tuesday, January 3rdd 8pm-12am
+Tuesday, January 10th 8pm-12am
+Wedbesday, January 18th 8pm-12am
+Tuesday, January 24th 8pm-12am"															
+12/4/2016 22:03:49	Bunny, Easter	hoppityhoppityhop@gmail.com	Level II = College Interns	Monthly Shift Requests					"Saturday, January 21st 4pm - 8pm"	"Saturday, January 28th 4pm-8pm"																				
+12/5/2016 11:51:48	Navas, Lava	lnavas@gmail.com	Level II = College Interns	Reschedule		Monday, December 19th 8am-12pm	Sunday, December 11th 8pm-12am	Saturday, December 10 12pm-4pm																	
+12/5/2016 11:55:31	Navas, Lava 	lnavas@gmail.com	Level II = College Interns	Reschedule		Monday, December 26 8am-12pm	Saturday, December 10th 12pm-4pm	Saturday, December 10th 8pm-12am																	
+12/5/2016 12:00:51	Navas, Lava	lnavas@gmail.com	Level II = College Interns	Schedule a make-up shift					Monday, December 12 8am-12pm	Monday, December 12 12pm-4pm															
+12/5/2016 14:38:50	Door, Josh	joshdoork@gmail.com	Level II = College Interns	Reschedule		Monday, December 5th 8pm-12am	Thursday, December 8th 8pm-12am	Friday, December 9th 12am-4am																	
+12/5/2016 16:00:51	OnlyFirst	lnavas@gmail.com	Level II = College Interns	Monthly Shift Requests					Monday, December 12 8am-12pm	Monday, December 12 12pm-4pm															
+12/6/2016 22:03:49	Bunny, Easter2	hoppityhoppityhop@gmail.com	Level II = College Interns	Monthly Shift Requests					"Saturday, January 21st 4pm - 8pm"	"Saturday, January 28th 4pm-8pm"																				
+12/7/2016 22:05:33	Bunny, Easter	hoppityhoppity2hop@gmail.com	Level II = College Interns	Monthly Shift Requests					"Saturday, January 21st 4pm - 8pm"	"Saturday, January 28th 4pm-8pm"																				
+12/7/2016 22:07:10	Bunny, Easter	hoppityhoppity3hop@gmail.com	Level II = College Interns	Monthly Shift Requests					"Saturday, January 21st 4pm - 8pm"	"Saturday, January 28th 4pm-8pm"	Please disregard my other requests.																			
+12/8/2016 02:03:11	Claws, Santa	hohoho@gmail.com	Level II = College Interns	Monthly Shift Requests					"Monday, January 2nd 8pm-12am
+Monday, January 9th 8pm-12am
+Tuesday, January 17th 8pm-12am
+Monday, January 23rd 8pm-12am"	"Tuesday, January 3rdd 8pm-12am
+Tuesday, January 10th 8pm-12am
+Wedbesday, January 18th 8pm-12am
+Tuesday, January 24th 8pm-12am"															
