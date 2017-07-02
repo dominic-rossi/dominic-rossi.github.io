@@ -131,10 +131,6 @@
 <script>
 import moment from 'moment'
 
-// TODO: add sorting by submission penalty. The user should be notified that
-// the penalty has been applied and what if any effect they would like the 
-// penalty to have.
-
 // http://stackoverflow.com/questions/20154368/union-find-implementation-using-python
 function indiciesMap(arr) {
   // Return a mapping from a row number to an index number in arr

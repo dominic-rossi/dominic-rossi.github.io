@@ -1,52 +1,49 @@
 <template>
-    <div>
-        <div class="row">
-            <h3>Schedule Inputs</h3>
-        </div>
-        <form v-on:submit.prevent="next">
-          <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-
-              <div class="row input-row">
-                <div class="col-md-6 text-left">
-                  <label for="inputArea" style="margin-top: 29px">Input data:</label>
-                </div>
-                <div class="col-md-6 text-left" style="width: 228px;">
-                  <textarea v-model.lazy="rows" id="inputArea" placeholder="Paste relevant rows from the Responses sheet here." required></textarea>
-                </div>
-              </div>
-
-              <div class="row input-row">
-                <div class="col-md-6 text-left">
-                  <label for="scheduleStart">Schedule open time:</label>
-                </div>
-                <div class="col-md-6 text-left">
-                  <input id="scheduleStart" type="datetime-local" v-model.lazy="schedule_open" required>
-                </div>
-              </div>
-
-              <div class="row input-row">
-                <div class="col-md-6 text-left">
-                  <label for="scheduleMonth">Date of the first shift:</label>
-                </div>
-                <div class="col-md-6 text-left">
-                  <input id="scheduleMonth" type="date" v-model.lazy="schedule_month" required>
-                </div>
-              </div>
-
-              <div class="row text-left" style="margin-top: 20px;">
-                  <div class="col-md-6 col-md-offset-2">
-                      <a v-on:click="back" class="navigation"><i class="fa fa-chevron-left fa-2x"></i></a>
-                  </div>
-                  <div class="col-md-4">
-                    <button type="submit" class="navigation"><i class="fa fa-chevron-right fa-2x"></i></button>
-                  </div>
-              </div>
-            </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-centered">
+      <form v-on:submit.prevent="next">
+        <h3>Schedule Inputs</h3>
+        <div class="row input-row">
+          <div class="col-xs-6">
+            <label for="inputArea" class="paste-rows">Input data:</label>
           </div>
-        </form>
+          <div class="col-xs-6">
+            <textarea v-model.lazy="rows" class="input-box" id="inputArea" placeholder="Paste relevant rows from the Responses sheet here." required></textarea>
+          </div>
+        </div>
+
+        <div class="row input-row">
+          <div class="col-xs-6">
+            <label for="scheduleStart">Schedule open time:</label>
+          </div>
+          <div class="col-xs-6">
+            <input id="scheduleStart" class="input-box" type="datetime-local" v-model.lazy="schedule_open" required>
+          </div>
+        </div>
+
+        <div class="row input-row">
+          <div class="col-xs-6">
+            <label for="scheduleMonth">Date of the first shift:</label>
+          </div>
+          <div class="col-xs-6">
+            <input id="scheduleMonth" class="input-box" type="date" v-model.lazy="schedule_month" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-6">
+              <a v-on:click="back" class="navigation"><i class="fa fa-chevron-left fa-2x"></i></a>
+          </div>
+          <div class="col-xs-6">
+            <button type="submit" class="navigation"><i class="fa fa-chevron-right fa-2x"></i></button>
+          </div>
+        </div>
+      </form>
+
     </div>
+  </div>
 </template>
+
 <script>
 import moment from 'moment'
 
@@ -132,8 +129,18 @@ export default {
 .navigation :hover {
   color: #23527c;
 }
-
 .input-row {
     margin-bottom: 15px;
+}
+.col-centered {
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+}
+.input-box {
+  width: 200px;
+}
+.paste-rows {
+  margin-top: 16px;
 }
 </style>
