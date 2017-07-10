@@ -1,17 +1,23 @@
 <template>
-  <div id="row">
-    <p class="col-md-6 col-md-offset-3">The output of scheduling can be seen below. The calendar output appears at the end of the list. The button below will all you to override the default policy of disallowing two people of the same level to work during the same shift.</p>
-    <div class="double-shift-box col-md-6 col-md-offset-3">
-      <input type="checkbox" id="checkbox" v-model="allow_double_shifting">
-      <label for="checkbox">Allow Double Shifting</label>
+  <div>
+    <div class="row">
+      <p class="col-md-6 col-md-offset-3">The output of scheduling can be seen below. The calendar output appears at the end of the list. The button below will all you to override the default policy of disallowing two people of the same level to work during the same shift.</p>
     </div>
-    <div v-if="previous_double_shift_value_differs" class="double-shift-button col-md-6 col-md-offset-3">
-      <button class="btn btn-default" v-on:click="updateSchedule()">Update Schedule</button>
+    <div class="row double-shift-box">
+      <div class="col-md-6 col-md-offset-3">
+        <input type="checkbox" id="checkbox" v-model="allow_double_shifting">
+        <label for="checkbox">Allow Double Shifting</label>
+      </div>
+    </div>
+    <div class="row double-shift-button" v-if="previous_double_shift_value_differs">
+      <div class="col-md-6 col-md-offset-3">
+        <button class="btn btn-default" v-on:click="updateSchedule()">Update Schedule</button>
+      </div>
     </div>
 
     <div class="all-results">
-      <div v-for="(result, idx) in schedule_results" class="col-md-6 col-md-offset-3">
-        <div class="result">
+      <div v-for="(result, idx) in schedule_results" class="row result-row">
+        <div class="result col-md-6 col-md-offset-3">
           <p class="name-header">{{result.full_name}} <span class="email-header">{{result.email_address}}</span></p>
           <ul class="nav nav-tabs" role="tablist">
             <li role="presentation" class="active"><a :href="'#email' + idx" :aria-controls="'email' + idx" role="tab" data-toggle="tab">Email</a></li>
@@ -60,8 +66,8 @@
       </div>
     </div>
 
-    <div class="col-md-6 col-md-offset-3">
-      <div class="result">
+    <div class="row result-row">
+      <div class="result col-md-6 col-md-offset-3">
         <p class="cal-header name-header">Calendar</p>
         <div class="copy-container">
           <a v-on:click="copyToClipboard()" class="copy-button"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></a>
@@ -70,11 +76,11 @@
       </div>
     </div>
 
-    <div class="col-md-2 col-md-offset-4 text-left back-button">
-      <a v-on:click="back" class="navigation"><i class="fa fa-chevron-left fa-2x"></i></a>
+    <div class="row">
+      <div class="col-md-2 col-md-offset-4 text-left back-button">
+        <a v-on:click="back" class="navigation"><i class="fa fa-chevron-left fa-2x"></i></a>
+      </div>
     </div>
-
-
   </div>
 </template>
 
@@ -291,17 +297,25 @@ function ScheduledShifts(date_in_month) {
     return this.shift_times[shift_day.toString()].first_slots[start_hour_idx];
   }
   this.percent_taken_in_week = function(start_time) {
-    let start_sunday = moment(start_time).day(0).startOf('date');
-    let shifts_in_week = 5*7;
+    let week_start = moment(start_time).day(0).startOf('date');
+    if (week_start.isBefore(this.month_start)) {
+      week_start = moment(this.month_start);
+    }
+    let week_end = moment(week_start).day(7);
+    if (week_end.isAfter(moment(this.month_start).endOf('month'))) {
+      week_end = moment(this.month_start).date(this.days_in_month).hour(0);
+    }
+    let days_in_week = week_end.date() - week_start.date();
+    let shifts_in_week = 5 * days_in_week;
     let num_shifts_taken = 0;
-    for (let i = 0; i < 7; ++i) {
-      let date_str = start_sunday.toString();
+    for (let i = 0; i < days_in_week; ++i) {
+      let date_str = week_start.toString();
       for (let j = 0; j < this.shift_starts.length; ++j) {
         if (this.shift_times[date_str].first_slots[j]) {
           num_shifts_taken += 1;
         }
       }
-      start_sunday.add(1, 'days');
+      week_start.add(1, 'days');
     }
     // console.log('Week is ', 100*num_shifts_taken/shifts_in_week, '% full');
     return num_shifts_taken/shifts_in_week;
@@ -753,8 +767,10 @@ export default {
 .result {
   border: 1px solid rgba(128, 128, 128, 0.34);
   padding: 10px 10px 10px 10px;
-  margin: 0 0 15px 0;
   text-align: left;
+}
+.result-row {
+  margin-bottom: 15px;
 }
 .tab {
   padding: 10px 0px 0px 0px;
@@ -779,10 +795,10 @@ export default {
   float: right;
 }
 .double-shift-button {
-margin: 0px 0px 10px 0px;
+  margin-bottom: 10px;
 }
 .double-shift-box {
-margin: 0px 0px 5px 0px;
+  margin-bottom: 5px;
 }
 .calender {
   white-space: pre-wrap;

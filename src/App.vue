@@ -60,7 +60,6 @@ a {
   border: none;
   color: #42b983;
 }
-
 .navigation :hover {
   color: #23527c;
 }

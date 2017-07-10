@@ -132,15 +132,15 @@ export default {
 .input-row {
     margin-bottom: 15px;
 }
-.col-centered {
-    float: none;
-    margin-right: auto;
-    margin-left: auto;
-}
 .input-box {
   width: 200px;
 }
 .paste-rows {
   margin-top: 16px;
+}
+.col-centered {
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
 }
 </style>

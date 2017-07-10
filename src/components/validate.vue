@@ -86,11 +86,15 @@
           <th class="custom-th">Name</th>
           <th class="custom-th">Entered Shifts</th>
           <th class="custom-th">Normalized Shifts</th>
+          <th class="custom-th">Delete</th>
         </tr>
         <tr v-for="(row, row_num) in split_rows" class="shift-table">
           <td>{{row[1]}}</td>
           <td class="shift-td"><textarea v-model="row[9]" class="shift-input" :rows="(row[9].match(/\n/g) || []).length + 1"></textarea></td>
           <td><div v-for="shift in primary_shifts[row_num]">{{shift.string}}</div></td>
+          <td>
+            <button class="btn btn-default" v-on:click="deleteRow(row_num)">D</button>
+          </td>
         </tr>
       </table>
       <button class="btn btn-default" v-on:click="savePrimaryShifts()">Confirm</button>
@@ -103,11 +107,15 @@
           <th class="custom-th">Name</th>
           <th class="custom-th">Entered Shifts</th>
           <th class="custom-th">Normalized Shifts</th>
+          <th class="custom-th">Delete</th>
         </tr>
         <tr v-for="(row, row_num) in split_rows" class="shift-table">
           <td>{{row[1]}}</td>
           <td class="shift-td"><textarea v-model="row[10]" class="shift-input" :rows="(row[10].match(/\n/g) || []).length + 1"></textarea></td>
           <td><div v-for="shift in alternate_shifts[row_num]">{{shift.string}}</div></td>
+          <td>
+            <button class="btn btn-default" v-on:click="deleteRow(row_num)">D</button>
+          </td>
         </tr>
       </table>
       <button class="btn btn-default" v-on:click="saveAlternateShifts()">Confirm</button>
@@ -401,6 +409,9 @@ export default {
       first_row[10] = alternates;
       this.split_rows[first_row_idx] = first_row;
       this.duplicates_updated = true;
+    },
+    deleteRow (row_idx) {
+      this.split_rows.splice(row_idx, 1);
     },
     savePrimaryShifts () {
       this.check_primary_shifts = false;
