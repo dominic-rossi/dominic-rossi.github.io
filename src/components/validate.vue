@@ -432,13 +432,17 @@ export default {
         valid_row.alternate_requests = this.alternate_shifts[i];
         valid_row.comments = this.split_rows[i][11];
         let primary_string = '';
-        for (let j = 0; j < this.primary_shifts[i].length; ++j) {
-          primary_string += this.primary_shifts[i][j].string + '\n';
+        if (this.primary_shifts[i][0].day) {
+          for (let j = 0; j < this.primary_shifts[i].length; ++j) {
+            primary_string += this.primary_shifts[i][j].string + '\n';
+          }
         }
         valid_row.primary_string = primary_string;
         let alternate_string = '';
-        for (let j = 0; j < this.alternate_shifts[i].length; ++ j) {
-          alternate_string += this.alternate_shifts[i][j].string + '\n';
+        if (this.alternate_shifts[i][0].day) {
+          for (let j = 0; j < this.alternate_shifts[i].length; ++ j) {
+            alternate_string += this.alternate_shifts[i][j].string + '\n';
+          }
         }
         valid_row.alternate_string = alternate_string;
         this.valid_rows.push(valid_row);
@@ -454,17 +458,21 @@ export default {
         valid_str += this.valid_rows[i].email + '\t';
         valid_str += this.valid_rows[i].level + '\t';
         valid_str += 'Monthly Shift Requests \t\t\t\t\t';
-        for (var j = 0; j < this.valid_rows[i].primary_requests.length; ++j) {
-          valid_str += this.valid_rows[i].primary_requests[j].string;
-          if (j < this.valid_rows[i].primary_requests.length - 1) {
-            valid_str += '\n';
+        if (this.valid_rows[i].primary_requests[0].day) {
+          for (var j = 0; j < this.valid_rows[i].primary_requests.length; ++j) {
+            valid_str += this.valid_rows[i].primary_requests[j].string;
+            if (j < this.valid_rows[i].primary_requests.length - 1) {
+              valid_str += '\n';
+            }
           }
         }
         valid_str += '\t';
-        for (var j = 0; j < this.valid_rows[i].alternate_requests.length; ++j) {
-          valid_str += this.valid_rows[i].alternate_requests[j].string;
-          if (j < this.valid_rows[i].alternate_requests.length - 1) {
-            valid_str += '\n';
+        if (this.valid_rows[i].alternate_requests[0].day) {
+          for (var j = 0; j < this.valid_rows[i].alternate_requests.length; ++j) {
+            valid_str += this.valid_rows[i].alternate_requests[j].string;
+            if (j < this.valid_rows[i].alternate_requests.length - 1) {
+              valid_str += '\n';
+            }
           }
         }
         valid_str += '\t' + this.valid_rows[i].comments;

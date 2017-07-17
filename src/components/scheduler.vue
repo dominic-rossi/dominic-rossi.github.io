@@ -610,6 +610,9 @@ export default {
     },
     canSchedule(shift_time, name, intern_level, is_primary) {
       let shift_start = shift_time.start_time;
+      if (!shift_start) {
+        return false;
+      }
       // for alternate requests, prevent working in the same week
       if (!is_primary && this.personWorkingDuringWeek(shift_start, name)) {
           return false;
