@@ -85,9 +85,9 @@
 </template>
 
 <script>
-import moment from 'moment'
+import moment from 'moment';
 
-var ScheduleResults = function() {
+const ScheduleResults = function () {
   this.full_name = null;
   this.num_scheduled = 0;
   this.num_primaries_requested = 0;
@@ -109,33 +109,33 @@ function ScheduledShifts(date_in_month) {
 
   // want to be able to do shifts[start_time] and see how many slots are full
   // also want to be able to iterate over shifts, starting at start_time:
-  // shifts[start_time] could in this case return an index or offset, 
+  // shifts[start_time] could in this case return an index or offset,
   // so we could do shifts.getAllShiftsInRange(start, stop)
   this.days_in_month = moment(date_in_month).daysInMonth();
   this.shift_times = {};
   this.month_start = moment(date_in_month).startOf('month');
-  let i_date = moment(this.month_start);
+  const iDate = moment(this.month_start);
   this.shift_starts = [
-    moment(i_date).hour(8),
-    moment(i_date).hour(12),
-    moment(i_date).hour(16),
-    moment(i_date).hour(20),
-    moment(i_date).hour(0)
+    moment(iDate).hour(8),
+    moment(iDate).hour(12),
+    moment(iDate).hour(16),
+    moment(iDate).hour(20),
+    moment(iDate).hour(0)
   ];
   this.shift_ends = [
-    moment(i_date).hour(12),
-    moment(i_date).hour(16),
-    moment(i_date).hour(20),
-    moment(i_date).hour(0),
-    moment(i_date).hour(4)
+    moment(iDate).hour(12),
+    moment(iDate).hour(16),
+    moment(iDate).hour(20),
+    moment(iDate).hour(0),
+    moment(iDate).hour(4)
   ];
   for (let i = 0; i < this.days_in_month; ++i) {
-    let shift_day = moment(i_date);
+    let shift_day = moment(iDate);
     this.shift_times[shift_day.toString()] = {
       'first_slots': new Array(this.shift_starts.length).fill(null),
       'second_slots': new Array(this.shift_starts.length).fill(null),
     }
-    i_date.add(1, 'days');
+    iDate.add(1, 'days');
   }
 
   // add getters and setters to get a name / set a slot from a datetime

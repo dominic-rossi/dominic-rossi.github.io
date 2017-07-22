@@ -1,17 +1,21 @@
-import Vue from 'vue'
-import VueResource from 'vue-resource'
-import moment from 'moment'
-import autosize from 'autosize'
-import 'bootstrap/dist/js/bootstrap'
-import store from './store'
-import router from './router'
-import { sync } from 'vuex-router-sync'
-import App from './App.vue'
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import Vue from 'vue';
+import App from './App';
+import router from './router';
 
-Vue.use(VueResource)
+import VueResource from 'vue-resource';
+import moment from 'moment';
+import 'bootstrap/dist/js/bootstrap';
+import store from './store';
+import { sync } from 'vuex-router-sync';
 
-sync(store, router)
+Vue.config.productionTip = false;
 
+Vue.use(VueResource);
+
+sync(store, router);
+/* eslint-disable no-new */
 const app = new Vue({
   router,
   store
