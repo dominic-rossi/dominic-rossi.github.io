@@ -10,6 +10,8 @@ const store = new Vuex.Store({
     schedule_month: null,
     valid_rows: [],
     validated_names: null,
+    primaryShifts: null,
+    alternateShifts: null,
   },
   mutations: {
     save_rows(state, payload) {
@@ -21,11 +23,17 @@ const store = new Vuex.Store({
     save_schedule_month(state, payload) {
       state.schedule_month = payload;
     },
-    save_valid_rows(state, payload) {
-      state.valid_rows = payload;
-    },
     validated_names(state, validity) {
       state.validated_names = validity;
+    },
+    update_rows(state, payload) {
+      state.valid_rows = payload;
+    },
+    save_primary(state, payload) {
+      state.primaryShifts = payload;
+    },
+    save_alternate(state, payload) {
+      state.alternateShifts = payload;
     },
   },
 });
