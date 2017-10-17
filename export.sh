@@ -12,4 +12,6 @@ git checkout master
 # Ideally all of the data will be incorporated into tests. So there won't
 # be a need for anything other than what is checked in.
 rm -rf ./dist
-cp -r /tmp/dist ./
+rm -rf ./static
+cp -r /tmp/dist/index.html ./
+cp -r /tmp/dist/static ./static
